@@ -4,335 +4,460 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mykonos VIP Transfers</title>
+<meta name="description" content="Private transfers in Mykonos with a professional driver. Airport, ports, villas and beach clubs. Fixed prices per way.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0f2a3a;
-    --ink-soft:#4d6b78;
-    --paper:#f7fbfc;
-    --card:#ffffff;
-    --line:#dce8ec;
-    --aegean:#1c6f93;
-    --aegean-deep:#0f425a;
-    --sand:#d8a857;
+    --black:#121212;
+    --black-2:#1c1c1c;
+    --black-3:#2a2a2a;
+    --gold:#cdaf55;
+    --gold-dark:#ae8a29;
+    --gold-light:#edcd79;
+    --gold-grad:linear-gradient(90deg,#ae8a29 0%,#edcd79 100%);
+    --grey:#f2f2f2;
+    --line:#e3e3e3;
+    --text:#121212;
+    --text-soft:#5d5d5d;
+    --white:#ffffff;
     --success:#2f7a5c;
     --danger:#b2473f;
-    --radius:16px;
-    --display: 'Cormorant Garamond', 'Iowan Old Style', serif;
-    --body: 'Work Sans', -apple-system, Segoe UI, sans-serif;
+    --font:'Raleway', Helvetica, Arial, sans-serif;
   }
   *{box-sizing:border-box;}
-  html,body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);}
-  body{line-height:1.55;}
-  img,svg{max-width:100%;}
-  h1,h2,h3{font-family:var(--display);font-weight:600;text-wrap:balance;margin:0;}
-  a{color:var(--aegean-deep);}
+  html{scroll-behavior:smooth;}
+  html,body{margin:0;background:var(--white);color:var(--text);font-family:var(--font);}
+  body{line-height:1.65;}
+  h1,h2,h3,h4{margin:0;line-height:1.15;text-wrap:balance;}
+  a{color:inherit;}
+  svg{max-width:100%;}
   .wrap{max-width:1180px;margin:0 auto;padding:0 24px;}
-  section{padding:88px 0;}
-  @media (max-width:640px){section{padding:56px 0;}}
+  .gold-text{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent;}
 
-  .nav{position:sticky;top:0;z-index:40;background:rgba(255,255,255,0.92);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);}
-  .nav-row{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1180px;margin:0 auto;gap:16px;flex-wrap:wrap;}
-  .brand{display:flex;align-items:center;gap:10px;color:var(--aegean-deep);font-family:var(--display);font-size:1.25rem;font-weight:700;}
-  .brand .mark{width:30px;height:30px;flex:none;}
-  .nav-links{display:flex;gap:22px;flex-wrap:wrap;}
-  .nav-links a{color:var(--ink);text-decoration:none;font-size:0.9rem;font-weight:500;}
-  .nav-links a:hover{color:var(--aegean);}
-  .nav-phone{color:var(--ink);font-weight:600;font-size:0.92rem;white-space:nowrap;}
-  .nav-cta{background:var(--aegean);color:#fff;border-radius:999px;padding:9px 18px;font-weight:600;font-size:0.88rem;text-decoration:none;}
+  /* ---------- Top bar ---------- */
+  .topbar{background:var(--black);color:#cfcfcf;font-size:.8rem;}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:9px;padding-bottom:9px;flex-wrap:wrap;}
+  .topbar a{text-decoration:none;color:#cfcfcf;display:inline-flex;align-items:center;gap:6px;}
+  .topbar a:hover{color:var(--gold-light);}
+  .topbar .left,.topbar .right{display:flex;gap:18px;align-items:center;flex-wrap:wrap;}
+  .topbar svg{width:14px;height:14px;}
+  .lang{font-weight:600;letter-spacing:.06em;}
+  .lang b{color:var(--gold);}
 
-  .hero{position:relative;padding:0;overflow:hidden;background:linear-gradient(180deg,#0f425a 0%,#1c6f93 72%,var(--paper) 100%);color:#fff;}
-  .hero-inner{max-width:1180px;margin:0 auto;padding:96px 24px 48px;position:relative;z-index:2;}
-  .hero h1{font-size:clamp(2.2rem,5vw,3.7rem);color:#fff;max-width:760px;}
-  .hero p.lede{margin:20px 0 32px;max-width:560px;color:#e3f0f4;font-size:1.08rem;}
+  /* ---------- Nav ---------- */
+  .nav{position:sticky;top:0;z-index:50;background:rgba(18,18,18,.96);backdrop-filter:blur(6px);border-bottom:1px solid #ffffff14;}
+  .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:14px;padding-bottom:14px;}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;}
+  .logo svg{width:40px;height:40px;flex:none;}
+  .logo .t1{font-weight:800;letter-spacing:.14em;font-size:.95rem;text-transform:uppercase;display:block;line-height:1.1;}
+  .logo .t2{font-weight:500;letter-spacing:.32em;font-size:.6rem;text-transform:uppercase;color:var(--gold);display:block;}
+  .menu{display:flex;gap:26px;}
+  .menu a{color:#fff;text-decoration:none;font-size:.86rem;font-weight:600;letter-spacing:.04em;text-transform:uppercase;position:relative;padding:4px 0;}
+  .menu a::after{content:"";position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--gold-grad);transition:right .25s;}
+  .menu a:hover::after{right:0;}
+  .nav-phone{color:#fff;text-decoration:none;font-weight:700;font-size:.92rem;white-space:nowrap;display:flex;align-items:center;gap:8px;}
+  .nav-phone svg{width:18px;height:18px;color:var(--gold);}
+  @media (max-width:980px){.menu{display:none;}}
+
+  /* ---------- Buttons ---------- */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:4px;padding:15px 30px;font-weight:700;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;font-family:inherit;transition:transform .2s, box-shadow .2s;}
+  .btn:hover{transform:scale(1.04);}
+  .btn-gold{background:var(--gold-grad);color:var(--black);box-shadow:0 10px 26px -12px rgba(174,138,41,.8);}
+  .btn-outline{background:transparent;color:#fff;border:1.5px solid #ffffff66;}
+  .btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light);}
+  .btn-wa{background:#25d366;color:#fff;}
+  .btn svg{width:18px;height:18px;}
+
+  /* ---------- Hero ---------- */
+  .hero{position:relative;min-height:88vh;display:flex;align-items:center;color:#fff;overflow:hidden;background:var(--black);}
+  .hero-bg{position:absolute;inset:0;width:100%;height:100%;}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,18,18,.92) 0%,rgba(18,18,18,.65) 50%,rgba(18,18,18,.25) 100%);}
+  .hero .wrap{position:relative;z-index:2;width:100%;padding-top:80px;padding-bottom:80px;}
+  .hero .welcome{font-size:clamp(1.2rem,2.2vw,1.6rem);font-weight:300;letter-spacing:.06em;color:#e8e8e8;}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.6rem);font-weight:800;text-transform:uppercase;letter-spacing:.02em;margin:6px 0 18px;max-width:780px;}
+  .hero p{max-width:520px;font-size:1.08rem;color:#dcdcdc;font-weight:400;margin:0 0 34px;}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
-  .btn{display:inline-flex;align-items:center;gap:8px;border-radius:999px;padding:14px 26px;font-weight:600;font-size:0.95rem;text-decoration:none;border:1.5px solid transparent;cursor:pointer;}
-  .btn-primary{background:var(--sand);color:#2a1f08;}
-  .btn-primary:hover{background:#e3b968;}
-  .btn-ghost{color:#fff;border-color:rgba(255,255,255,0.45);background:transparent;}
-  .btn-ghost:hover{border-color:#fff;}
-  .skyline{position:absolute;left:0;right:0;bottom:-2px;z-index:1;opacity:0.95;}
-  .hero-badges{display:flex;gap:28px;margin-top:48px;flex-wrap:wrap;color:#cfe6ec;font-size:0.84rem;}
-  .hero-badges strong{color:#fff;display:block;font-family:var(--display);font-size:1.35rem;}
+  .hero-line{width:90px;height:3px;background:var(--gold-grad);margin-bottom:22px;}
 
-  .eyebrow{color:var(--sand);text-transform:uppercase;letter-spacing:0.12em;font-size:0.76rem;font-weight:700;margin-bottom:10px;}
-  .section-head{max-width:620px;margin-bottom:44px;}
-  .section-head h2{font-size:clamp(1.8rem,3vw,2.4rem);}
-  .section-head p{color:var(--ink-soft);margin-top:12px;}
+  /* ---------- Sections ---------- */
+  section{padding:100px 0;}
+  @media (max-width:640px){section{padding:64px 0;}}
+  .kicker{display:inline-block;color:var(--gold-dark);font-weight:700;letter-spacing:.24em;text-transform:uppercase;font-size:.76rem;margin-bottom:10px;}
+  .title{font-size:clamp(1.9rem,3.6vw,2.8rem);font-weight:800;text-transform:uppercase;letter-spacing:.01em;}
+  .title-line{width:70px;height:3px;background:var(--gold-grad);margin:18px 0 26px;}
+  .center{text-align:center;}
+  .center .title-line{margin-left:auto;margin-right:auto;}
+  .lead{color:var(--text-soft);font-size:1.02rem;max-width:640px;}
+  .center .lead{margin-left:auto;margin-right:auto;}
+  .bg-grey{background:var(--grey);}
+  .bg-black{background:var(--black);color:#fff;}
+  .bg-black .lead{color:#bdbdbd;}
 
-  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
-  @media (max-width:860px){.grid-3{grid-template-columns:1fr 1fr;}}
-  @media (max-width:560px){.grid-3{grid-template-columns:1fr;}}
-  .service-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;}
-  .service-card .icon{width:40px;height:40px;margin-bottom:16px;color:var(--aegean);}
-  .service-card h3{font-size:1.1rem;margin-bottom:8px;}
-  .service-card p{color:var(--ink-soft);font-size:0.92rem;margin:0;}
+  /* About */
+  .about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;}
+  @media (max-width:880px){.about{grid-template-columns:1fr;gap:40px;}}
+  .about-art{position:relative;aspect-ratio:1/1;max-width:520px;}
+  .about-art .a1,.about-art .a2{position:absolute;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,0,0,.45);}
+  .about-art .a1{inset:0 18% 18% 0;}
+  .about-art .a2{inset:42% 0 0 38%;border:8px solid #fff;}
+  .about-art svg{width:100%;height:100%;display:block;}
+  .highlights{list-style:none;padding:0;margin:22px 0;}
+  .highlights li{display:flex;gap:12px;align-items:flex-start;margin-bottom:12px;font-weight:600;}
+  .highlights li::before{content:"";flex:none;width:20px;height:20px;margin-top:3px;border-radius:50%;background:var(--gold-grad) center/12px no-repeat;-webkit-mask:none;}
+  .highlights li span{font-weight:400;color:var(--text-soft);display:block;font-size:.92rem;}
+  .fixed-price{display:inline-block;font-weight:800;font-size:1.15rem;margin:6px 0 22px;padding:12px 18px;border-left:3px solid var(--gold);background:var(--grey);}
+  .contact-chips{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px;}
+  .chip{display:inline-flex;align-items:center;gap:8px;padding:9px 14px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:.86rem;font-weight:600;}
+  .chip:hover{border-color:var(--gold);}
+  .chip svg{width:16px;height:16px;color:var(--gold-dark);}
 
-  .fleet-strip{background:#0f2a3a;color:#fff;}
-  .fleet-strip .section-head h2{color:#fff;}
-  .fleet-strip .section-head p{color:#bcd3da;}
-  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;}
-  @media (max-width:900px){.grid-4{grid-template-columns:1fr 1fr;}}
-  @media (max-width:560px){.grid-4{grid-template-columns:1fr;}}
-  .fleet-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.14);border-radius:var(--radius);padding:22px;}
-  .fleet-card h3{color:#fff;font-size:1.08rem;}
-  .fleet-card .sub{color:#bcd3da;font-size:0.82rem;margin-top:4px;}
-  .fleet-card .cap{display:flex;gap:14px;margin-top:16px;font-size:0.8rem;color:#e3f0f4;}
+  /* Fleet */
+  .fleet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;}
+  @media (max-width:980px){.fleet-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.fleet-grid{grid-template-columns:1fr;}}
+  .vehicle{background:var(--black-2);border:1px solid #ffffff12;border-radius:6px;overflow:hidden;transition:transform .25s, border-color .25s;}
+  .vehicle:hover{transform:translateY(-6px);border-color:var(--gold);}
+  .vehicle .pic{aspect-ratio:16/10;background:linear-gradient(160deg,#2a2a2a,#121212);display:flex;align-items:center;justify-content:center;padding:18px;}
+  .vehicle .pic svg{width:88%;}
+  .vehicle .body{padding:20px 22px 24px;}
+  .vehicle h3{font-size:1.02rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em;}
+  .vehicle .sub{color:#a9a9a9;font-size:.84rem;margin-top:4px;}
+  .vehicle .specs{display:flex;gap:16px;margin-top:16px;font-size:.84rem;color:var(--gold-light);font-weight:600;}
+  .vehicle .specs span{display:inline-flex;align-items:center;gap:6px;}
+  .vehicle .specs svg{width:16px;height:16px;}
 
-  table.rates{width:100%;border-collapse:collapse;background:var(--card);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);}
-  table.rates th, table.rates td{padding:14px 16px;text-align:left;font-size:0.9rem;border-bottom:1px solid var(--line);}
-  table.rates th{background:#e9f3f6;color:var(--ink-soft);font-weight:600;text-transform:uppercase;font-size:0.72rem;letter-spacing:0.06em;}
-  table.rates td.price{font-weight:700;color:var(--aegean-deep);font-family:var(--display);font-size:1.05rem;}
-  .rates-note{margin-top:14px;font-size:0.82rem;color:var(--ink-soft);}
-  .table-scroll{overflow-x:auto;}
+  /* Why choose us */
+  .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:44px;}
+  @media (max-width:980px){.why-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:520px){.why-grid{grid-template-columns:1fr;}}
+  .why-card{background:#fff;border-radius:6px;padding:30px 24px;text-align:center;transition:transform .25s, box-shadow .25s;border-bottom:3px solid transparent;}
+  .why-card:hover{transform:translateY(-5px);box-shadow:0 22px 44px -28px rgba(0,0,0,.35);border-bottom-color:var(--gold);}
+  .why-card .ic{width:62px;height:62px;border-radius:50%;background:var(--gold-grad);display:flex;align-items:center;justify-content:center;margin:0 auto 18px;color:var(--black);}
+  .why-card .ic svg{width:28px;height:28px;}
+  .why-card h3{font-size:.98rem;font-weight:700;text-transform:uppercase;letter-spacing:.03em;margin-bottom:8px;}
+  .why-card p{margin:0;color:var(--text-soft);font-size:.88rem;}
 
-  .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px 32px;}
-  @media (max-width:640px){.why-grid{grid-template-columns:1fr;}}
-  .why-item{display:flex;gap:14px;align-items:flex-start;}
-  .why-item .dot{width:34px;height:34px;flex:none;border-radius:50%;background:#fbeed2;color:var(--sand);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:var(--display);}
-  .why-item h3{font-size:1.02rem;margin-bottom:4px;}
-  .why-item p{margin:0;color:var(--ink-soft);font-size:0.9rem;}
+  /* Tour */
+  .tour{display:grid;grid-template-columns:1.05fr .95fr;gap:0;align-items:stretch;}
+  @media (max-width:880px){.tour{grid-template-columns:1fr;}}
+  .tour-art{min-height:420px;position:relative;}
+  .tour-art svg{position:absolute;inset:0;width:100%;height:100%;}
+  .tour-body{padding:80px 64px;}
+  @media (max-width:640px){.tour-body{padding:56px 24px;}}
+  .stops{display:grid;grid-template-columns:1fr 1fr;gap:10px 20px;margin:24px 0 30px;padding:0;list-style:none;}
+  .stops li{display:flex;align-items:center;gap:10px;color:#e3e3e3;font-weight:500;font-size:.94rem;}
+  .stops li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none;}
 
-  .testimonial-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;}
-  .stars{color:var(--sand);letter-spacing:2px;margin-bottom:12px;}
-  .testimonial-card p.quote{font-family:var(--display);font-size:1.1rem;margin:0 0 14px;}
-  .testimonial-card .who{font-size:0.82rem;color:var(--ink-soft);}
-  .placeholder-flag{display:inline-block;margin-top:10px;font-size:0.72rem;color:#8a6a28;background:#fbeed2;padding:3px 9px;border-radius:999px;}
+  /* Rates */
+  .table-scroll{overflow-x:auto;margin-top:40px;}
+  table.rates{width:100%;border-collapse:collapse;background:#fff;}
+  table.rates th,table.rates td{padding:16px 18px;text-align:left;font-size:.92rem;border-bottom:1px solid var(--line);}
+  table.rates th{background:var(--black);color:#fff;font-weight:700;text-transform:uppercase;font-size:.74rem;letter-spacing:.12em;}
+  table.rates tr:hover td{background:#faf7ef;}
+  table.rates td.price{font-weight:800;color:var(--gold-dark);font-size:1.02rem;}
+  .rates-note{margin-top:14px;font-size:.82rem;color:var(--text-soft);}
 
-  .book-shell{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;box-shadow:0 20px 50px -30px rgba(15,42,58,0.35);}
+  /* Booking */
+  .book-shell{background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 30px 60px -40px rgba(0,0,0,.4);margin-top:40px;border-top:4px solid var(--gold);}
   .book-steps{display:flex;border-bottom:1px solid var(--line);}
-  .book-steps div{flex:1;text-align:center;padding:14px 8px;font-size:0.78rem;font-weight:600;color:var(--ink-soft);border-bottom:3px solid transparent;}
-  .book-steps div.active{color:var(--aegean-deep);border-color:var(--sand);}
-  .book-body{padding:32px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:32px;}
-  @media (max-width:760px){.book-body{grid-template-columns:1fr;padding:24px;}}
+  .book-steps div{flex:1;text-align:center;padding:16px 6px;font-size:.74rem;font-weight:700;color:var(--text-soft);border-bottom:3px solid transparent;letter-spacing:.08em;text-transform:uppercase;}
+  .book-steps div.active{color:var(--black);border-color:var(--gold);}
+  .book-body{padding:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;}
+  @media (max-width:760px){.book-body{grid-template-columns:1fr;padding:22px;}}
   .book-panel{display:none;}
   .book-panel.active{display:block;}
-  label{display:block;font-size:0.82rem;font-weight:600;margin:16px 0 6px;}
+  label{display:block;font-size:.8rem;font-weight:700;margin:16px 0 6px;letter-spacing:.02em;}
   label:first-child{margin-top:0;}
-  select, input, textarea{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:9px;font-size:0.95rem;font-family:inherit;background:#fff;}
-  select:focus, input:focus, textarea:focus{outline:2px solid var(--aegean);outline-offset:1px;}
+  select,input,textarea{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:4px;font-size:.94rem;font-family:inherit;background:#fafafa;color:var(--text);}
+  select:focus,input:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px;background:#fff;}
   .car-options{display:grid;gap:10px;margin-top:6px;}
-  .car-option{display:flex;justify-content:space-between;align-items:center;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;cursor:pointer;}
-  .car-option.selected{border-color:var(--sand);background:#fbf6ea;}
-  .car-name{font-weight:600;font-size:0.94rem;}
-  .car-sub{font-size:0.76rem;color:var(--ink-soft);}
-  .car-price{font-weight:700;color:var(--aegean-deep);font-family:var(--display);}
-  .step-actions{display:flex;gap:10px;margin-top:22px;}
-  .btn-dark{background:var(--aegean-deep);color:#fff;border:none;border-radius:9px;padding:12px 20px;font-weight:600;cursor:pointer;font-size:0.92rem;}
-  .btn-dark:disabled{background:#b9c7cc;cursor:not-allowed;}
-  .btn-outline{background:transparent;border:1.5px solid var(--line);border-radius:9px;padding:12px 20px;font-weight:600;cursor:pointer;font-size:0.92rem;color:var(--ink);}
-  .fare-panel{background:#0f2a3a;color:#fff;border-radius:14px;padding:22px;}
-  .fare-panel .label{font-size:0.78rem;color:#bcd3da;}
-  .fare-panel .amount{font-family:var(--display);font-size:2.2rem;margin:6px 0 2px;}
-  .fare-panel .meta{font-size:0.82rem;color:#bcd3da;}
-  .summary-list dt{font-size:0.74rem;color:var(--ink-soft);margin-top:10px;text-transform:uppercase;letter-spacing:0.04em;}
-  .summary-list dd{margin:2px 0 0;font-weight:600;}
-  .notice{font-size:0.78rem;color:var(--ink-soft);margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
+  .car-option{display:flex;justify-content:space-between;align-items:center;border:1.5px solid var(--line);border-radius:4px;padding:13px 15px;cursor:pointer;}
+  .car-option.selected{border-color:var(--gold);background:#faf6ea;}
+  .car-name{font-weight:700;font-size:.92rem;}
+  .car-sub{font-size:.76rem;color:var(--text-soft);}
+  .car-price{font-weight:800;color:var(--gold-dark);}
+  .step-actions{display:flex;gap:10px;margin-top:24px;}
+  .btn-dark{background:var(--black);color:#fff;border:none;border-radius:4px;padding:13px 24px;font-weight:700;cursor:pointer;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;font-family:inherit;}
+  .btn-dark:disabled{background:#c7c7c7;cursor:not-allowed;}
+  .btn-line{background:transparent;border:1.5px solid var(--line);border-radius:4px;padding:13px 24px;font-weight:700;cursor:pointer;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text);font-family:inherit;}
+  .fare-panel{background:var(--black);color:#fff;border-radius:6px;padding:24px;}
+  .fare-panel .label{font-size:.72rem;color:#a9a9a9;letter-spacing:.14em;text-transform:uppercase;font-weight:700;}
+  .fare-panel .amount{font-size:2.3rem;font-weight:800;margin:6px 0 2px;}
+  .fare-panel .meta{font-size:.82rem;color:#a9a9a9;}
+  .summary-list dt{font-size:.7rem;color:var(--text-soft);margin-top:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;}
+  .summary-list dd{margin:2px 0 0;font-weight:600;font-size:.92rem;}
+  .notice{font-size:.76rem;color:var(--text-soft);margin-top:16px;padding-top:16px;border-top:1px solid var(--line);}
   .confirm-box{text-align:center;padding:20px 0;}
-  .confirm-box .mark-ok{width:56px;height:56px;border-radius:50%;background:#dff1e7;color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;}
-  .confirm-ref{font-family:var(--display);font-size:1.8rem;font-weight:700;color:var(--aegean-deep);margin:10px 0;letter-spacing:0.03em;}
-  .err{color:var(--danger);font-size:0.85rem;margin-top:10px;display:none;}
+  .confirm-box .ok{width:56px;height:56px;border-radius:50%;background:#dff1e7;color:var(--success);display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:1.5rem;}
+  .confirm-ref{font-size:1.8rem;font-weight:800;margin:10px 0;letter-spacing:.06em;}
+  .err{color:var(--danger);font-size:.85rem;margin-top:10px;display:none;}
 
-  footer{background:#0b2230;color:#aec6ce;padding:56px 0 30px;font-size:0.86rem;}
-  .foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px;}
-  @media (max-width:700px){.foot-grid{grid-template-columns:1fr;}}
-  footer h4{color:#fff;font-family:var(--display);font-size:1.05rem;margin-bottom:12px;}
-  footer a{color:#aec6ce;text-decoration:none;display:block;margin-bottom:8px;}
-  footer a:hover{color:#fff;}
-  .foot-bottom{margin-top:40px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.1);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:0.78rem;}
-  .contact-line{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+  /* Contact */
+  .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;}
+  @media (max-width:880px){.contact{grid-template-columns:1fr;gap:36px;}}
+  .contact-info .item{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;}
+  .contact-info .item .ic{width:48px;height:48px;border-radius:50%;background:var(--gold-grad);color:var(--black);display:flex;align-items:center;justify-content:center;flex:none;}
+  .contact-info .item .ic svg{width:22px;height:22px;}
+  .contact-info .item b{display:block;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem;color:var(--gold-light);}
+  .contact-info .item a{color:#fff;text-decoration:none;font-weight:600;}
+  .contact-form{background:var(--black-2);padding:34px;border-radius:6px;border:1px solid #ffffff12;}
+  .contact-form label{color:#e3e3e3;}
+  .contact-form input,.contact-form textarea{background:var(--black-3);border-color:#3a3a3a;color:#fff;}
+  .contact-form .row{display:grid;grid-template-columns:1fr 1fr;gap:0 16px;}
+  @media (max-width:520px){.contact-form .row{grid-template-columns:1fr;}}
+  .consent{display:flex;gap:10px;align-items:flex-start;margin:18px 0 22px;font-size:.84rem;color:#bdbdbd;}
+  .consent input{width:auto;margin-top:4px;}
+
+  /* Footer */
+  footer{background:#0b0b0b;color:#a9a9a9;padding:70px 0 26px;font-size:.88rem;}
+  .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1.2fr;gap:40px;}
+  @media (max-width:800px){.foot-grid{grid-template-columns:1fr;}}
+  footer h4{color:#fff;font-size:.86rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-bottom:16px;}
+  footer h4::after{content:"";display:block;width:36px;height:2px;background:var(--gold-grad);margin-top:10px;}
+  footer a{color:#a9a9a9;text-decoration:none;display:block;margin-bottom:9px;}
+  footer a:hover{color:var(--gold-light);}
+  .foot-bottom{margin-top:50px;padding-top:22px;border-top:1px solid #ffffff14;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:.78rem;}
+  .foot-bottom nav{display:flex;gap:18px;flex-wrap:wrap;}
+  .foot-bottom nav a{margin:0;}
+
+  /* Floating WhatsApp */
+  .wa-float{position:fixed;right:20px;bottom:20px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25d366;color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -10px rgba(0,0,0,.5);}
+  .wa-float svg{width:28px;height:28px;}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
 </style>
 </head>
 <body>
 
-<div class="nav">
-  <div class="nav-row">
-    <div class="brand">
-      <svg class="mark" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="15" fill="#1c6f93"/><path d="M16 7v18M16 7l6 5-6 5-6-5 6-5z" stroke="#fff" stroke-width="1.4" stroke-linejoin="round"/></svg>
-      Mykonos VIP Transfers
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></g></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.4-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 2.9 2.9 0 0 0-.9 2.2 5.1 5.1 0 0 0 1 2.7 11.6 11.6 0 0 0 4.5 3.9c1.7.7 2.3.8 3.1.7a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></g></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></g></symbol>
+  <symbol id="i-bag" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M9 7V4h6v3"/></g></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="10" r="2.5"/></g></symbol>
+  <symbol id="car-sedan" viewBox="0 0 240 110"><g fill="none" stroke="#cdaf55" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M14 78c0-10 6-16 20-18l26-4 28-20c6-4 12-6 20-6h46c10 0 18 3 26 10l18 18 24 4c10 2 14 8 14 16v6H14z"/><path d="M92 38l-18 18h66V34h-28c-8 0-14 1-20 4zM150 34v22h46l-16-16c-5-4-10-6-16-6z"/><circle cx="58" cy="86" r="14" fill="#121212"/><circle cx="186" cy="86" r="14" fill="#121212"/><circle cx="58" cy="86" r="5"/><circle cx="186" cy="86" r="5"/></g></symbol>
+  <symbol id="car-van" viewBox="0 0 240 110"><g fill="none" stroke="#cdaf55" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 84V44c0-10 6-18 18-18h138c10 0 16 4 22 12l22 24 14 4c6 2 8 6 8 12v6z"/><path d="M28 40h38v20H28zM76 40h38v20H76zM124 40h34v20h-34zM168 40l20 20h-20z"/><circle cx="58" cy="86" r="14" fill="#121212"/><circle cx="188" cy="86" r="14" fill="#121212"/><circle cx="58" cy="86" r="5"/><circle cx="188" cy="86" r="5"/></g></symbol>
+  <symbol id="car-suv" viewBox="0 0 240 110"><g fill="none" stroke="#cdaf55" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"><path d="M14 82V64c0-8 4-12 12-14l30-4 22-18c4-3 9-4 14-4h70c8 0 14 3 18 8l14 16 26 4c8 2 12 6 12 14v16z"/><path d="M86 34L70 50h64V30h-36c-5 0-9 1-12 4zM144 30v20h44l-12-14c-3-4-7-6-12-6z"/><circle cx="60" cy="86" r="15" fill="#121212"/><circle cx="186" cy="86" r="15" fill="#121212"/><circle cx="60" cy="86" r="5"/><circle cx="186" cy="86" r="5"/></g></symbol>
+</svg>
+
+<!-- Top bar -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="left">
+      <a href="mailto:bookings@mykonosviptransfers.example"><svg><use href="#i-mail"/></svg>bookings@mykonosviptransfers.example</a>
+      <a href="#" aria-label="Instagram"><svg><use href="#i-ig"/></svg>Instagram</a>
     </div>
-    <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#fleet">Fleet</a>
-      <a href="#rates">Rates</a>
-      <a href="#why">Why Us</a>
-      <a href="#testimonials">Reviews</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div style="display:flex;align-items:center;gap:16px;">
-      <span class="nav-phone">+30 228 900 0000</span>
-      <a class="nav-cta" href="#book">Book Now</a>
+    <div class="right">
+      <a href="tel:+302289000000"><svg><use href="#i-phone"/></svg>+30 228 900 0000</a>
+      <span class="lang"><b>EN</b> / EL</span>
     </div>
   </div>
 </div>
 
-<section class="hero">
-  <div class="hero-inner">
-    <div class="eyebrow">Mykonos Town · Psarou · Super Paradise</div>
-    <h1>Island transfers that feel like the holiday already started</h1>
-    <p class="lede">Met at the steps of the plane, driven straight to your villa or the beach club table you booked. Fixed rates, no haggling at the taxi rank.</p>
-    <div class="hero-ctas">
-      <a href="#book" class="btn btn-primary">Get an instant quote</a>
-      <a href="#rates" class="btn btn-ghost">See fixed rates</a>
-    </div>
-    <div class="hero-badges">
-      <div><strong>24/7</strong>Airport &amp; port pickups</div>
-      <div><strong>30+</strong>Fixed routes</div>
-      <div><strong>&lt; 10 min</strong>To Mykonos Town</div>
-    </div>
+<!-- Nav -->
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Mykonos VIP Transfers home">
+      <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#ae8a29"/><stop offset="1" stop-color="#edcd79"/></linearGradient></defs><rect x="1" y="1" width="38" height="38" rx="4" stroke="url(#lg)" stroke-width="1.6"/><path d="M11 28V16l9 7 9-7v12" stroke="url(#lg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><span class="t1">Mykonos VIP</span><span class="t2">Private Transfers</span></span>
+    </a>
+    <nav class="menu">
+      <a href="#top">Home</a>
+      <a href="#about">Services</a>
+      <a href="#fleet">Our fleet</a>
+      <a href="#why">Why choose us?</a>
+      <a href="#tour">Mykonos tour</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-phone" href="tel:+302289000000"><svg><use href="#i-phone"/></svg>+30 228 900 0000</a>
   </div>
-  <svg class="skyline" viewBox="0 0 1180 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <rect width="1180" height="150" fill="none"/>
-    <g>
-      <rect x="0" y="108" width="1180" height="42" fill="#0b2230"/>
-      <!-- cycladic houses -->
-      <g fill="#f7fbfc">
-        <rect x="60" y="86" width="60" height="30" rx="4"/>
-        <rect x="128" y="96" width="46" height="20" rx="4"/>
-        <circle cx="90" cy="86" r="18" fill="#f7fbfc"/>
-        <rect x="80" y="86" width="20" height="4" fill="#1c6f93"/>
-      </g>
-      <g fill="#f7fbfc">
-        <rect x="900" y="90" width="54" height="26" rx="4"/>
-        <circle cx="927" cy="90" r="16" fill="#f7fbfc"/>
-        <rect x="960" y="98" width="42" height="18" rx="4"/>
-      </g>
-      <!-- windmill -->
-      <g transform="translate(560,55)">
-        <rect x="-10" y="20" width="20" height="55" fill="#f7fbfc"/>
-        <polygon points="-10,20 10,20 4,0 -4,0" fill="#f7fbfc"/>
-        <line x1="0" y1="8" x2="0" y2="-34" stroke="#e8dcc0" stroke-width="3"/>
-        <line x1="-24" y1="-14" x2="24" y2="2" stroke="#e8dcc0" stroke-width="3"/>
-        <circle cx="0" cy="6" r="3" fill="#0b2230"/>
-      </g>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="top" style="padding:0;">
+  <svg class="hero-bg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <linearGradient id="hsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b2a35"/><stop offset=".55" stop-color="#5b7c8c"/><stop offset=".8" stop-color="#d9b97a"/></linearGradient>
+      <linearGradient id="hsea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f4a5c"/><stop offset="1" stop-color="#0d1a20"/></linearGradient>
+    </defs>
+    <rect width="1600" height="900" fill="url(#hsky)"/>
+    <circle cx="1240" cy="520" r="60" fill="#f4dca6" opacity=".9"/>
+    <rect y="560" width="1600" height="340" fill="url(#hsea)"/>
+    <!-- hillside & cycladic village -->
+    <path d="M760 560 C 900 430 1100 400 1320 430 S 1600 470 1600 470 V 620 H 760 Z" fill="#2c3438"/>
+    <g fill="#f3efe6">
+      <rect x="980" y="452" width="46" height="34" rx="3"/><rect x="1032" y="462" width="34" height="24" rx="3"/>
+      <rect x="1072" y="446" width="52" height="40" rx="3"/><rect x="1130" y="458" width="38" height="28" rx="3"/>
+      <rect x="1176" y="450" width="44" height="36" rx="3"/><rect x="1228" y="462" width="30" height="24" rx="3"/>
+      <rect x="1010" y="492" width="56" height="32" rx="3"/><rect x="1074" y="494" width="44" height="30" rx="3"/>
+      <rect x="1126" y="490" width="60" height="34" rx="3"/><rect x="1194" y="494" width="40" height="30" rx="3"/>
+      <path d="M1146 446a16 16 0 0 1 32 0z"/>
     </g>
+    <g fill="#1f6f93"><rect x="1150" y="438" width="24" height="4"/><rect x="1088" y="462" width="8" height="12"/><rect x="1196" y="506" width="8" height="12"/><rect x="1030" y="504" width="8" height="12"/></g>
+    <!-- windmills on ridge -->
+    <g fill="#f3efe6" stroke="#f3efe6">
+      <g transform="translate(1380,420)"><rect x="-9" y="0" width="18" height="40" rx="2"/><path d="M-9 0h18l-5-10h-8z"/><g stroke-width="2.5"><line x1="0" y1="-8" x2="0" y2="-40"/><line x1="0" y1="-8" x2="28" y2="4"/><line x1="0" y1="-8" x2="-28" y2="4"/><line x1="0" y1="-8" x2="-14" y2="20"/></g></g>
+      <g transform="translate(1470,438)"><rect x="-8" y="0" width="16" height="34" rx="2"/><path d="M-8 0h16l-4-9h-8z"/><g stroke-width="2.2"><line x1="0" y1="-7" x2="0" y2="-34"/><line x1="0" y1="-7" x2="24" y2="3"/><line x1="0" y1="-7" x2="-24" y2="3"/><line x1="0" y1="-7" x2="-12" y2="17"/></g></g>
+    </g>
+    <!-- road + car -->
+    <path d="M0 760 Q 500 700 1600 760 V 900 H 0 Z" fill="#141414"/>
+    <path d="M0 800 Q 500 742 1600 802" stroke="#cdaf55" stroke-width="3" stroke-dasharray="36 28" fill="none" opacity=".6"/>
+    <use href="#car-van" x="820" y="640" width="440" height="200"/>
   </svg>
-</section>
-
-<section id="services">
   <div class="wrap">
-    <div class="eyebrow">What we drive</div>
-    <div class="section-head">
-      <h2>Built for how people actually arrive on Mykonos</h2>
-      <p>Airport, port, villa, beach club — every pickup point on the island, one fixed price per route.</p>
-    </div>
-    <div class="grid-3">
-      <div class="service-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 16l1.5-5A3 3 0 0 1 7.4 9h9.2a3 3 0 0 1 2.9 2L21 16"/><rect x="2.5" y="16" width="19" height="4.5" rx="1.5"/><circle cx="7" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg>
-        <h3>Airport transfers</h3>
-        <p>Mykonos Airport (JMK) to your villa or hotel, with a driver waiting at arrivals, name board in hand.</p>
-      </div>
-      <div class="service-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 14l4-9 4 9M3 14h8M13 14l4-9 4 9M13 14h8"/><path d="M7 21h10"/></svg>
-        <h3>New Port &amp; Old Port transfers</h3>
-        <p>Ferry and yacht arrivals at Tourlos or the Old Port, timed to your crossing.</p>
-      </div>
-      <div class="service-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z"/></svg>
-        <h3>Beach club transfers</h3>
-        <p>Psarou, Super Paradise, Elia, Scorpios — booked to match your table time, not a bus schedule.</p>
-      </div>
-      <div class="service-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
-        <h3>Hourly chauffeur</h3>
-        <p>Keep the car on standby for sunset in Little Venice, dinner in town, and the ride home after.</p>
-      </div>
-      <div class="service-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>
-        <h3>Villa transfers</h3>
-        <p>Direct to the gate, even on the island's narrower roads — our drivers know every villa complex.</p>
-      </div>
-      <div class="service-card">
-        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-4.6-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.4-7 10-7 10z"/></svg>
-        <h3>Weddings &amp; events</h3>
-        <p>Guest shuttle coordination for island weddings, with multiple vehicles timed to one schedule.</p>
-      </div>
+    <div class="hero-line"></div>
+    <div class="welcome reveal">Welcome to</div>
+    <h1 class="reveal"><span class="gold-text">Private transfer</span><br>Mykonos</h1>
+    <p class="reveal">Travel safely and comfortably around Mykonos with a professional driver — airport, ports, villas and beach clubs.</p>
+    <div class="hero-ctas reveal">
+      <a class="btn btn-gold" href="#book">Book now</a>
+      <a class="btn btn-outline" href="tel:+302289000000"><svg><use href="#i-phone"/></svg>Call</a>
+      <a class="btn btn-wa" href="https://wa.me/302289000000" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
     </div>
   </div>
 </section>
 
-<section class="fleet-strip" id="fleet">
-  <div class="wrap">
-    <div class="eyebrow">The fleet</div>
-    <div class="section-head">
-      <h2>One quote, four ways to arrive</h2>
-      <p>Every class drives the same fixed routes — pick on comfort and party size, not on guesswork.</p>
+<!-- About -->
+<section id="about">
+  <div class="wrap about">
+    <div class="about-art reveal">
+      <div class="a1">
+        <svg viewBox="0 0 400 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="400" height="400" fill="#e9eef0"/>
+          <rect y="250" width="400" height="150" fill="#1f6f93"/>
+          <rect y="250" width="400" height="10" fill="#2f86ab"/>
+          <g fill="#ffffff"><rect x="40" y="150" width="90" height="100" rx="4"/><rect x="140" y="130" width="110" height="120" rx="4"/><rect x="260" y="160" width="100" height="90" rx="4"/><path d="M175 130a20 20 0 0 1 40 0z"/></g>
+          <g fill="#1f6f93"><rect x="70" y="190" width="22" height="30"/><rect x="180" y="180" width="30" height="40"/><rect x="290" y="190" width="22" height="30"/><rect x="186" y="122" width="18" height="6"/></g>
+          <g fill="#c94f7c" opacity=".85"><circle cx="134" cy="150" r="10"/><circle cx="126" cy="162" r="8"/><circle cx="142" cy="166" r="9"/></g>
+        </svg>
+      </div>
+      <div class="a2">
+        <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="300" height="220" fill="#121212"/>
+          <use href="#car-sedan" x="20" y="50" width="260" height="120"/>
+        </svg>
+      </div>
     </div>
-    <div class="grid-4" id="fleetCards"></div>
+    <div class="reveal">
+      <span class="kicker">Who are we?</span>
+      <h2 class="title">About <span class="gold-text">us</span></h2>
+      <div class="title-line"></div>
+      <p class="lead">Mykonos VIP Transfers is a private chauffeur service built around comfort and punctuality. From the moment you land to your last beach-club sunset, a professional driver gets you there — no taxi queues, no haggling.</p>
+      <ul class="highlights">
+        <li><div>Customised services<span>Itineraries built around your schedule, villa and reservations.</span></div></li>
+        <li><div>Airport &amp; port transfers<span>Mykonos Airport (JMK), New Port (Tourlos) and Old Port.</span></div></li>
+        <li><div>Events &amp; excursions<span>Weddings, private parties, beach clubs and island tours.</span></div></li>
+      </ul>
+      <div class="fixed-price">Competitive rates and <span class="gold-text">fixed prices per way!</span></div>
+      <div class="contact-chips">
+        <a class="chip" href="tel:+302289000000"><svg><use href="#i-phone"/></svg>Call us</a>
+        <a class="chip" href="https://wa.me/302289000000" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>WhatsApp</a>
+        <a class="chip" href="mailto:bookings@mykonosviptransfers.example"><svg><use href="#i-mail"/></svg>Email</a>
+      </div>
+      <a class="btn btn-gold" href="#book">Book now</a>
+    </div>
   </div>
 </section>
 
-<section id="rates">
-  <div class="wrap">
-    <div class="eyebrow">Fixed routes</div>
-    <div class="section-head">
-      <h2>Sample rates, Economy class</h2>
-      <p>Indicative starting prices, calculated from our standard per-km rate. Final pricing is configurable to your own cost structure — see the booking widget below for live figures by vehicle class.</p>
+<!-- Fleet -->
+<section class="bg-black" id="fleet">
+  <div class="wrap center">
+    <span class="kicker" style="color:var(--gold-light);">Premium vehicles</span>
+    <h2 class="title">Our <span class="gold-text">fleet</span></h2>
+    <div class="title-line"></div>
+    <p class="lead">Modern, air-conditioned and spotless vehicles for every group size. Every class drives the same fixed routes.</p>
+    <div class="fleet-grid" id="fleetCards" style="text-align:left;"></div>
+  </div>
+</section>
+
+<!-- Why choose us -->
+<section class="bg-grey" id="why">
+  <div class="wrap center">
+    <span class="kicker">General info</span>
+    <h2 class="title">Why <span class="gold-text">choose us?</span></h2>
+    <div class="title-line"></div>
+    <div class="why-grid">
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h3>Personalised service</h3><p>Every ride planned around your flight, ferry, villa and plans.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg></div><h3>Fixed rates per route</h3><p>Airport – Town – Airport and every route on the island, priced up front.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><h3>English &amp; Greek drivers</h3><p>Licensed, vetted, local drivers who know every villa road.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20"/></svg></div><h3>Pay after the service</h3><p>Book now and pay at the end of your ride — cash or card.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div><h3>Free cancellation</h3><p>Cancel or change for free up to 48 hours before pickup.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="9" r="2.5"/><path d="M2 20a7 7 0 0 1 14 0M15 20a5 5 0 0 1 7-4.6"/></svg></div><h3>Groups up to 8</h3><p>Minivans for families, friends and wedding guests.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="5" y="7" width="14" height="13" rx="2"/><path d="M9 7V4h6v3"/></svg></div><h3>Excess baggage</h3><p>Golf clubs, surfboards and bikes on request — tell us when booking.</p></div>
+      <div class="why-card reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 2 4 6v6c0 5 3.4 8.6 8 10 4.6-1.4 8-5 8-10V6z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Safety first</h3><p>Fully insured vehicles, child seats on request, flight &amp; ferry tracking.</p></div>
     </div>
-    <div class="table-scroll">
+  </div>
+</section>
+
+<!-- Mykonos tour -->
+<section class="bg-black" id="tour" style="padding:0;">
+  <div class="tour">
+    <div class="tour-art">
+      <svg viewBox="0 0 700 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <defs><linearGradient id="tsky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e98b5a"/><stop offset=".5" stop-color="#f3c37c"/><stop offset="1" stop-color="#f7e2b0"/></linearGradient></defs>
+        <rect width="700" height="520" fill="url(#tsky)"/>
+        <circle cx="470" cy="300" r="70" fill="#fff3d6" opacity=".9"/>
+        <rect y="330" width="700" height="190" fill="#1d4f66"/>
+        <g fill="#fff3d6" opacity=".6"><rect x="420" y="346" width="100" height="3"/><rect x="440" y="366" width="60" height="3"/><rect x="430" y="388" width="80" height="2"/></g>
+        <!-- Little Venice style waterfront -->
+        <g fill="#f6f1e7"><rect x="0" y="230" width="70" height="110"/><rect x="70" y="210" width="60" height="130"/><rect x="130" y="240" width="80" height="100"/><rect x="210" y="220" width="56" height="120"/></g>
+        <g fill="#2a6f8f"><rect x="14" y="250" width="40" height="8"/><rect x="82" y="232" width="36" height="8"/><rect x="146" y="262" width="48" height="8"/><rect x="222" y="242" width="34" height="8"/></g>
+        <g fill="#b33a3a"><rect x="20" y="280" width="12" height="20"/><rect x="92" y="270" width="12" height="20"/><rect x="156" y="290" width="12" height="20"/><rect x="230" y="280" width="12" height="20"/></g>
+        <!-- windmills on hill -->
+        <path d="M300 330 C 360 260 520 240 700 270 V 330 Z" fill="#c9a26a" opacity=".55"/>
+        <g fill="#f6f1e7" stroke="#f6f1e7">
+          <g transform="translate(560,236)"><rect x="-10" y="0" width="20" height="44" rx="2"/><path d="M-10 0h20l-5-11h-10z"/><g stroke-width="3"><line x1="0" y1="-8" x2="0" y2="-44"/><line x1="0" y1="-8" x2="32" y2="6"/><line x1="0" y1="-8" x2="-32" y2="6"/><line x1="0" y1="-8" x2="-16" y2="24"/></g></g>
+          <g transform="translate(640,246)"><rect x="-9" y="0" width="18" height="36" rx="2"/><path d="M-9 0h18l-4-10h-10z"/><g stroke-width="2.6"><line x1="0" y1="-7" x2="0" y2="-38"/><line x1="0" y1="-7" x2="28" y2="5"/><line x1="0" y1="-7" x2="-28" y2="5"/><line x1="0" y1="-7" x2="-14" y2="20"/></g></g>
+        </g>
+      </svg>
+    </div>
+    <div class="tour-body reveal">
+      <span class="kicker" style="color:var(--gold-light);">Discover the island</span>
+      <h2 class="title">Mykonos <span class="gold-text">tour</span></h2>
+      <div class="title-line"></div>
+      <p class="lead">See the best of the island in comfort and at your own pace. Your private driver takes you from the iconic windmills to hidden beaches, with as many stops as you like.</p>
+      <ul class="stops">
+        <li>Little Venice</li><li>Kato Mili windmills</li>
+        <li>Ano Mera &amp; Panagia Tourliani</li><li>Armenistis lighthouse</li>
+        <li>Psarou &amp; Platis Gialos</li><li>Paradise &amp; Super Paradise</li>
+        <li>Agios Sostis</li><li>Fokos &amp; Kalafatis</li>
+      </ul>
+      <a class="btn btn-gold" href="#book">Book now</a>
+    </div>
+  </div>
+</section>
+
+<!-- Rates -->
+<section class="bg-grey" id="rates">
+  <div class="wrap center">
+    <span class="kicker">Fixed prices per way</span>
+    <h2 class="title">Our <span class="gold-text">rates</span></h2>
+    <div class="title-line"></div>
+    <p class="lead">Starting prices for the Economy class. See the booking form below for every vehicle class.</p>
+    <div class="table-scroll" style="text-align:left;">
       <table class="rates">
         <thead><tr><th>Route</th><th>Distance</th><th>Drive time</th><th>From</th></tr></thead>
         <tbody id="ratesBody"></tbody>
       </table>
     </div>
-    <p class="rates-note">Rates shown are indicative Economy-class figures generated by this page's pricing formula, not scraped or guaranteed prices — set your real per-km/per-minute rates in the booking backend before publishing live.</p>
+    <p class="rates-note">Indicative prices calculated from our standard rate per km and minute. Set your real rates in the booking backend before going live.</p>
   </div>
 </section>
 
-<section id="why" style="background:#e9f3f6;">
+<!-- Booking -->
+<section id="book">
   <div class="wrap">
-    <div class="eyebrow">Why riders choose us</div>
-    <div class="section-head">
-      <h2>What's included on every ride</h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item"><div class="dot">1</div><div><h3>Fixed, transparent rates</h3><p>The price you're quoted is the price you pay — no "island surcharge" sprung on you at the curb.</p></div></div>
-      <div class="why-item"><div class="dot">2</div><div><h3>Meet &amp; greet</h3><p>Your driver waits inside arrivals, or dockside at the port, with a name board.</p></div></div>
-      <div class="why-item"><div class="dot">3</div><div><h3>English &amp; Greek speaking drivers</h3><p>Every driver is vetted, licensed, and briefed on your itinerary in advance.</p></div></div>
-      <div class="why-item"><div class="dot">4</div><div><h3>Free cancellation</h3><p>Cancel or reschedule up to 24 hours before pickup at no charge.</p></div></div>
-      <div class="why-item"><div class="dot">5</div><div><h3>Flight &amp; ferry tracking</h3><p>We adjust pickup time automatically if your flight or ferry runs early or late.</p></div></div>
-      <div class="why-item"><div class="dot">6</div><div><h3>Child seats on request</h3><p>Let us know passenger ages when booking and we'll have the right seat ready.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<section id="testimonials">
-  <div class="wrap">
-    <div class="eyebrow">Reviews</div>
-    <div class="section-head">
-      <h2>What riders say</h2>
-    </div>
-    <div class="grid-3">
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Landed, and the driver was already at the gate with our name. Villa in 15 minutes, no standing around in the heat."</p>
-        <div class="who">Example guest — Villa transfer</div>
-        <span class="placeholder-flag">Placeholder — swap in a real review</span>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Booked a van for our wedding guests between the port and the venue — every car arrived within five minutes of each other."</p>
-        <div class="who">Example guest — Wedding shuttle</div>
-        <span class="placeholder-flag">Placeholder — swap in a real review</span>
-      </div>
-      <div class="testimonial-card">
-        <div class="stars">★★★★★</div>
-        <p class="quote">"Our ferry got delayed two hours and they just quietly adjusted — no extra charge, no scramble to rebook."</p>
-        <div class="who">Example guest — New Port pickup</div>
-        <span class="placeholder-flag">Placeholder — swap in a real review</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="book" style="background:#e9f3f6;">
-  <div class="wrap">
-    <div class="eyebrow">Get a quote</div>
-    <div class="section-head">
-      <h2>Book your Mykonos transfer</h2>
-      <p>Pick a route, choose your vehicle, and confirm — the same flow your live booking system uses.</p>
+    <div class="center">
+      <span class="kicker">Instant quote</span>
+      <h2 class="title">Book your <span class="gold-text">transfer</span></h2>
+      <div class="title-line"></div>
     </div>
 
     <div class="book-shell">
@@ -347,23 +472,18 @@
           <div class="book-panel active" data-panel="1">
             <label for="routeSelect">Route</label>
             <select id="routeSelect"></select>
-
             <label for="pickupDate">Pickup date &amp; time</label>
             <input type="datetime-local" id="pickupDate">
-
             <label for="pax">Passengers</label>
             <input type="number" id="pax" min="1" max="8" value="2">
-
-            <div class="step-actions">
-              <button class="btn-dark" id="toStep2">Continue</button>
-            </div>
+            <div class="step-actions"><button class="btn-dark" id="toStep2">Continue</button></div>
           </div>
 
           <div class="book-panel" data-panel="2">
             <label>Choose your vehicle</label>
             <div class="car-options" id="carOptions"></div>
             <div class="step-actions">
-              <button class="btn-outline" data-back="1">Back</button>
+              <button class="btn-line" data-back="1">Back</button>
               <button class="btn-dark" id="toStep3" disabled>Continue</button>
             </div>
           </div>
@@ -378,7 +498,7 @@
             <label for="custNotes">Flight/ferry number / notes</label>
             <textarea id="custNotes" rows="2" placeholder="e.g. Seajets ferry arriving 14:30"></textarea>
             <div class="step-actions">
-              <button class="btn-outline" data-back="2">Back</button>
+              <button class="btn-line" data-back="2">Back</button>
               <button class="btn-dark" id="toConfirm" disabled>Confirm booking</button>
             </div>
             <div class="err" id="bookErr"></div>
@@ -386,12 +506,12 @@
 
           <div class="book-panel" data-panel="done">
             <div class="confirm-box">
-              <div class="mark-ok">✓</div>
+              <div class="ok">✓</div>
               <h3>Booking confirmed</h3>
               <p>Your reference number</p>
-              <div class="confirm-ref" id="confirmRef"></div>
-              <p style="color:var(--ink-soft);font-size:0.85rem;">Save this with your phone number to manage the booking later.</p>
-              <button class="btn-outline" id="bookAgain">Book another ride</button>
+              <div class="confirm-ref gold-text" id="confirmRef"></div>
+              <p style="color:var(--text-soft);font-size:.85rem;">Save this with your phone number to manage the booking later.</p>
+              <button class="btn-line" id="bookAgain">Book another ride</button>
             </div>
           </div>
         </div>
@@ -399,78 +519,117 @@
         <div>
           <div class="fare-panel">
             <div class="label">Estimated fare</div>
-            <div class="amount" id="fareAmount">€—</div>
+            <div class="amount gold-text" id="fareAmount">€—</div>
             <div class="meta" id="fareMeta">Choose a route to see pricing</div>
           </div>
           <dl class="summary-list" id="summaryList" style="margin-top:18px;"></dl>
-          <div class="notice">
-            This widget calculates fares locally for preview. Point its submit handler at your deployed <code>POST /api/bookings</code> endpoint (same formula &amp; vehicle classes as the backend already built) to persist real bookings — the code already tries that endpoint first and only falls back to this demo confirmation if it's unreachable.
-          </div>
+          <div class="notice">Fares are calculated in the browser for preview. Bookings are sent to <code>POST /api/bookings</code> when a booking backend is deployed on the same domain; otherwise a demo confirmation is shown.</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<footer id="contact">
+<!-- Contact -->
+<section class="bg-black" id="contact">
+  <div class="wrap contact">
+    <div class="contact-info reveal">
+      <span class="kicker" style="color:var(--gold-light);">Get in touch</span>
+      <h2 class="title">Contact <span class="gold-text">us</span></h2>
+      <div class="title-line"></div>
+      <p class="lead" style="margin-bottom:34px;">Questions, special requests or group bookings — we reply within the hour, 24/7.</p>
+      <div class="item"><div class="ic"><svg><use href="#i-phone"/></svg></div><div><b>Phone</b><a href="tel:+302289000000">+30 228 900 0000</a></div></div>
+      <div class="item"><div class="ic"><svg><use href="#i-wa"/></svg></div><div><b>WhatsApp</b><a href="https://wa.me/302289000000" target="_blank" rel="noopener">+30 228 900 0000</a></div></div>
+      <div class="item"><div class="ic"><svg><use href="#i-mail"/></svg></div><div><b>Email</b><a href="mailto:bookings@mykonosviptransfers.example">bookings@mykonosviptransfers.example</a></div></div>
+      <div class="item"><div class="ic"><svg><use href="#i-pin"/></svg></div><div><b>Base</b><span style="color:#fff;font-weight:600;">Mykonos, Cyclades, Greece</span></div></div>
+    </div>
+    <form class="contact-form reveal" id="contactForm">
+      <div class="row">
+        <div><label for="cfName">Name</label><input id="cfName" required></div>
+        <div><label for="cfEmail">Email</label><input id="cfEmail" type="email" required></div>
+      </div>
+      <div class="row">
+        <div><label for="cfPhone">Phone</label><input id="cfPhone" type="tel"></div>
+        <div><label for="cfSubject">Subject</label><input id="cfSubject"></div>
+      </div>
+      <label for="cfMsg">Message</label>
+      <textarea id="cfMsg" rows="5" required></textarea>
+      <label class="consent"><input type="checkbox" id="cfConsent" required> I have read and accept the privacy policy.</label>
+      <button class="btn btn-gold" type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <h4>Mykonos VIP Transfers</h4>
-        <p style="max-width:360px;">Private chauffeur transfers across Mykonos — airport, port, villa and beach club. Licensed drivers, fixed rates, available around the clock.</p>
-        <div class="contact-line">☎ +30 228 900 0000</div>
-        <div class="contact-line">✉ bookings@mykonosviptransfers.example</div>
+        <a class="logo" href="#top" style="margin-bottom:18px;">
+          <svg viewBox="0 0 40 40" fill="none" aria-hidden="true"><rect x="1" y="1" width="38" height="38" rx="4" stroke="url(#lg)" stroke-width="1.6"/><path d="M11 28V16l9 7 9-7v12" stroke="url(#lg)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span><span class="t1">Mykonos VIP</span><span class="t2">Private Transfers</span></span>
+        </a>
+        <p style="max-width:340px;">Private chauffeur transfers across Mykonos — airport, ports, villas and beach clubs. Fixed prices, professional drivers, 24/7.</p>
       </div>
       <div>
-        <h4>Company</h4>
-        <a href="#services">Services</a>
-        <a href="#fleet">Fleet</a>
-        <a href="#rates">Rates</a>
-        <a href="#why">Why us</a>
+        <h4>Menu</h4>
+        <a href="#top">Home</a><a href="#about">Services</a><a href="#fleet">Our fleet</a><a href="#why">Why choose us?</a><a href="#tour">Mykonos tour</a><a href="#contact">Contact</a>
       </div>
       <div>
-        <h4>Legal</h4>
-        <a href="#">Privacy policy</a>
-        <a href="#">Terms &amp; conditions</a>
-        <a href="#">Cancellation policy</a>
+        <h4>Contact</h4>
+        <a href="mailto:bookings@mykonosviptransfers.example">bookings@mykonosviptransfers.example</a>
+        <a href="tel:+302289000000">+30 228 900 0000</a>
+        <a href="#">Instagram</a>
+        <a href="../athens-platinum-transfers/">Sister site: Athens Platinum Transfers</a>
+        <a href="../aegean-elite-transfers/">Aegean Elite Transfers</a>
       </div>
     </div>
     <div class="foot-bottom">
       <span>© 2026 Mykonos VIP Transfers. All rights reserved.</span>
-      <span>Sister sites: Athens Platinum Transfers · Aegean Elite Transfers</span>
+      <nav><a href="#">Privacy policy</a><a href="#">Legal notice</a><a href="#">Cookies policy</a></nav>
     </div>
   </div>
 </footer>
 
+<a class="wa-float" href="https://wa.me/302289000000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg><use href="#i-wa"/></svg></a>
+
 <script>
 (function(){
+  // Reveal on scroll
+  var io = 'IntersectionObserver' in window ? new IntersectionObserver(function(es){
+    es.forEach(function(e){ if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.12 }) : null;
+  document.querySelectorAll('.reveal').forEach(function(el){ io ? io.observe(el) : el.classList.add('in'); });
+
+  // Contact form -> opens the visitor's email app (static site, no server)
+  document.getElementById('contactForm').addEventListener('submit', function(e){
+    e.preventDefault();
+    var v = function(id){ return document.getElementById(id).value.trim(); };
+    var body = 'Name: '+v('cfName')+'\nEmail: '+v('cfEmail')+'\nPhone: '+v('cfPhone')+'\n\n'+v('cfMsg');
+    window.location.href = 'mailto:bookings@mykonosviptransfers.example?subject=' + encodeURIComponent(v('cfSubject') || 'Transfer enquiry') + '&body=' + encodeURIComponent(body);
+  });
+
   var PRICING = { base: 3.5, perKm: 1.2, perMin: 0.25, minFare: 6.0, currency: '€' };
   var CAR_CLASSES = [
-    { key:'economy',  label:'Economy',       mult:1.0, maxPax:4, maxLuggage:2, sub:'Sedan · up to 4 passengers' },
-    { key:'comfort',  label:'Comfort',       mult:1.3, maxPax:4, maxLuggage:3, sub:'Premium sedan · up to 4 passengers' },
-    { key:'business', label:'Business',      mult:1.7, maxPax:4, maxLuggage:3, sub:'Executive sedan · up to 4 passengers' },
-    { key:'van',      label:'Van / Minibus', mult:1.9, maxPax:8, maxLuggage:8, sub:'Minivan · up to 8 passengers' }
+    { key:'economy',  label:'Economy',       mult:1.0, maxPax:4, maxLuggage:2, sub:'Comfortable sedan', icon:'car-sedan' },
+    { key:'comfort',  label:'Comfort',       mult:1.3, maxPax:4, maxLuggage:3, sub:'Premium sedan',     icon:'car-sedan' },
+    { key:'business', label:'Business',      mult:1.7, maxPax:4, maxLuggage:3, sub:'Executive SUV',     icon:'car-suv' },
+    { key:'van',      label:'Van / Minibus', mult:1.9, maxPax:8, maxLuggage:8, sub:'Luxury minivan',    icon:'car-van' }
   ];
   var ROUTES = [
-    { id:'jmk-town',     label:'Mykonos Airport (JMK) → Mykonos Town',      km:4,  min:10 },
-    { id:'jmk-psarou',   label:'Mykonos Airport (JMK) → Psarou Beach',      km:7,  min:12 },
-    { id:'port-town',    label:'New Port (Tourlos) → Mykonos Town',         km:2.5,min:7  },
-    { id:'jmk-elia',     label:'Mykonos Airport (JMK) → Elia Beach',        km:10, min:18 },
-    { id:'jmk-superpara',label:'Mykonos Airport (JMK) → Super Paradise',    km:9,  min:16 },
-    { id:'town-ornos',   label:'Mykonos Town → Ornos Bay',                  km:4,  min:10 }
+    { id:'jmk-town',      label:'Mykonos Airport (JMK) → Mykonos Town',   km:4,  min:10 },
+    { id:'jmk-psarou',    label:'Mykonos Airport (JMK) → Psarou Beach',   km:7,  min:12 },
+    { id:'port-town',     label:'New Port (Tourlos) → Mykonos Town',      km:2.5,min:7  },
+    { id:'jmk-elia',      label:'Mykonos Airport (JMK) → Elia Beach',     km:10, min:18 },
+    { id:'jmk-superpara', label:'Mykonos Airport (JMK) → Super Paradise', km:9,  min:16 },
+    { id:'town-ornos',    label:'Mykonos Town → Ornos Bay',               km:4,  min:10 }
   ];
 
-  function fare(km, min, mult){
-    var raw = (PRICING.base + km*PRICING.perKm + min*PRICING.perMin) * mult;
-    return Math.max(raw, PRICING.minFare);
-  }
+  function fare(km, min, mult){ return Math.max((PRICING.base + km*PRICING.perKm + min*PRICING.perMin) * mult, PRICING.minFare); }
   function money(v){ return PRICING.currency + v.toFixed(2); }
 
   var routeSelect = document.getElementById('routeSelect');
   ROUTES.forEach(function(r){
-    var opt = document.createElement('option');
-    opt.value = r.id; opt.textContent = r.label;
-    routeSelect.appendChild(opt);
+    var opt = document.createElement('option'); opt.value = r.id; opt.textContent = r.label; routeSelect.appendChild(opt);
   });
 
   var ratesBody = document.getElementById('ratesBody');
@@ -483,13 +642,15 @@
   var fleetCards = document.getElementById('fleetCards');
   CAR_CLASSES.forEach(function(c){
     var div = document.createElement('div');
-    div.className = 'fleet-card';
-    div.innerHTML = '<h3>'+c.label+'</h3><div class="sub">'+c.sub+'</div><div class="cap">'+c.maxPax+' passengers · '+c.maxLuggage+' bags</div>';
+    div.className = 'vehicle reveal';
+    div.innerHTML = '<div class="pic"><svg viewBox="0 0 240 110"><use href="#'+c.icon+'"/></svg></div>' +
+      '<div class="body"><h3>'+c.label+'</h3><div class="sub">'+c.sub+'</div>' +
+      '<div class="specs"><span><svg><use href="#i-user"/></svg>Up to '+c.maxPax+'</span><span><svg><use href="#i-bag"/></svg>'+c.maxLuggage+' bags</span></div></div>';
     fleetCards.appendChild(div);
+    io ? io.observe(div) : div.classList.add('in');
   });
 
-  var state = { route:null, carClass:null };
-
+  var state = { carClass:null };
   function selectedRoute(){ return ROUTES.find(function(r){ return r.id === routeSelect.value; }); }
 
   function goStep(step){
@@ -515,39 +676,27 @@
       var price = route ? money(fare(route.km, route.min, c.mult)) : '—';
       div.innerHTML = '<div><div class="car-name">'+c.label+'</div><div class="car-sub">Up to '+c.maxPax+' passengers · '+c.maxLuggage+' bags</div></div><div class="car-price">'+price+'</div>';
       if (!disabled) {
-        div.addEventListener('click', function(){
-          state.carClass = c.key;
-          renderCarOptions();
-          updateFarePanel();
-          document.getElementById('toStep3').disabled = false;
-        });
+        div.addEventListener('click', function(){ state.carClass = c.key; renderCarOptions(); updateFarePanel(); });
       }
       container.appendChild(div);
     });
+    document.getElementById('toStep3').disabled = !state.carClass;
   }
 
   function updateFarePanel(){
     var route = selectedRoute();
     var cls = CAR_CLASSES.find(function(c){ return c.key === state.carClass; });
-    if (route && cls) {
-      var f = fare(route.km, route.min, cls.mult);
-      document.getElementById('fareAmount').textContent = money(f);
-      document.getElementById('fareMeta').textContent = route.label + ' · ' + route.km + ' km · ~' + route.min + ' min · ' + cls.label;
-    } else if (route) {
-      document.getElementById('fareAmount').textContent = '€—';
-      document.getElementById('fareMeta').textContent = route.label + ' · choose a vehicle to see the price';
-    } else {
-      document.getElementById('fareAmount').textContent = '€—';
-      document.getElementById('fareMeta').textContent = 'Choose a route to see pricing';
-    }
+    var amt = document.getElementById('fareAmount'), meta = document.getElementById('fareMeta');
+    if (route && cls) { amt.textContent = money(fare(route.km, route.min, cls.mult)); meta.textContent = route.label + ' · ' + route.km + ' km · ~' + route.min + ' min · ' + cls.label; }
+    else if (route) { amt.textContent = '€—'; meta.textContent = route.label + ' · choose a vehicle to see the price'; }
+    else { amt.textContent = '€—'; meta.textContent = 'Choose a route to see pricing'; }
   }
 
   function renderSummary(){
     var route = selectedRoute();
     var cls = CAR_CLASSES.find(function(c){ return c.key === state.carClass; });
     var dt = document.getElementById('pickupDate').value;
-    var list = document.getElementById('summaryList');
-    list.innerHTML =
+    document.getElementById('summaryList').innerHTML =
       '<dt>Route</dt><dd>'+(route?route.label:'—')+'</dd>' +
       '<dt>When</dt><dd>'+(dt ? new Date(dt).toLocaleString() : '—')+'</dd>' +
       '<dt>Vehicle</dt><dd>'+(cls?cls.label:'—')+'</dd>' +
@@ -556,31 +705,19 @@
 
   routeSelect.addEventListener('change', function(){ updateFarePanel(); renderCarOptions(); });
   document.getElementById('pax').addEventListener('input', renderCarOptions);
-
-  document.getElementById('toStep2').addEventListener('click', function(){
-    renderCarOptions();
-    goStep(2);
-  });
-  document.getElementById('toStep3').addEventListener('click', function(){
-    renderSummary();
-    goStep(3);
-  });
-  document.querySelectorAll('[data-back]').forEach(function(btn){
-    btn.addEventListener('click', function(){ goStep(btn.dataset.back); });
-  });
+  document.getElementById('toStep2').addEventListener('click', function(){ renderCarOptions(); goStep(2); });
+  document.getElementById('toStep3').addEventListener('click', function(){ renderSummary(); goStep(3); });
+  document.querySelectorAll('[data-back]').forEach(function(btn){ btn.addEventListener('click', function(){ goStep(btn.dataset.back); }); });
 
   function validateContact(){
     var name = document.getElementById('custName').value.trim();
     var phone = document.getElementById('custPhone').value.trim();
     document.getElementById('toConfirm').disabled = !(name.length>1 && phone.length>5);
   }
-  ['custName','custPhone'].forEach(function(id){
-    document.getElementById(id).addEventListener('input', validateContact);
-  });
+  ['custName','custPhone'].forEach(function(id){ document.getElementById(id).addEventListener('input', validateContact); });
 
   function genReference(){
-    var chars = '23456789ABCDEFGHJKMNPQRSTUVWXYZ';
-    var ref = 'MVT-';
+    var chars = '23456789ABCDEFGHJKMNPQRSTUVWXYZ', ref = 'MVT-';
     for (var i=0;i<6;i++) ref += chars[Math.floor(Math.random()*chars.length)];
     return ref;
   }
@@ -598,8 +735,7 @@
     var payload = {
       pickupAddress: route.label.split('→')[0].trim(),
       dropoffAddress: route.label.split('→')[1].trim(),
-      distanceKm: route.km,
-      durationMin: route.min,
+      distanceKm: route.km, durationMin: route.min,
       pickupDatetime: new Date(document.getElementById('pickupDate').value).toISOString(),
       carClass: cls.key,
       passengers: document.getElementById('pax').value,
@@ -608,35 +744,20 @@
       customerEmail: document.getElementById('custEmail').value.trim(),
       notes: document.getElementById('custNotes').value.trim()
     };
-
-    fetch('/api/bookings', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    }).then(function(r){
-      if (!r.ok) throw new Error('backend not available');
-      return r.json();
-    }).then(function(data){
-      document.getElementById('confirmRef').textContent = data.reference;
-      goStep('done');
-    }).catch(function(){
-      document.getElementById('confirmRef').textContent = genReference();
-      goStep('done');
-    });
+    fetch('/api/bookings', { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(payload) })
+      .then(function(r){ if (!r.ok) throw new Error('backend not available'); return r.json(); })
+      .then(function(data){ document.getElementById('confirmRef').textContent = data.reference; goStep('done'); })
+      .catch(function(){ document.getElementById('confirmRef').textContent = genReference(); goStep('done'); });
   });
 
-  document.getElementById('bookAgain').addEventListener('click', function(){
-    window.location.hash = '';
-    location.reload();
-  });
+  document.getElementById('bookAgain').addEventListener('click', function(){ window.location.hash = ''; location.reload(); });
 
   (function(){
     var d = new Date(Date.now() + 2*60*60*1000);
     d.setMinutes(Math.ceil(d.getMinutes()/15)*15, 0, 0);
     function pad(n){ return String(n).padStart(2,'0'); }
     var local = d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())+'T'+pad(d.getHours())+':'+pad(d.getMinutes());
-    var el = document.getElementById('pickupDate');
-    el.value = local; el.min = local;
+    var el = document.getElementById('pickupDate'); el.value = local; el.min = local;
   })();
 
   updateFarePanel();
